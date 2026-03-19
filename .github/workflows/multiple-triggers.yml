@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Print message
-        run: echo "Workflow is running successfully"
+        run: echo Workflow is running successfully
 
       - name: Print selected environment
-        run: echo "Selected Environment: ${{ github.event.inputs.environment }}"
+        run: echo Selected Environment: ${{ github.event.inputs.environment }}
