@@ -1,0 +1,35 @@
+name: Task 1 - Multiple Workflow Triggers
+
+on:
+  # Automatic trigger when code is pushed to dev branch
+  push:
+    branches:
+      - dev
+
+  # Manual trigger from GitHub Actions tab
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Select the environment"
+        required: true
+        type: choice
+        options:
+          - dev
+          - qa
+          - prod
+
+jobs:
+  print-environment:
+    runs-on: windows-latest
+
+    steps:
+      - name: Show trigger type
+        run: echo "Workflow triggered by ${{ github.event_name }}"
+
+      - name: Print selected environment (Manual run)
+        if: github.event_name == 'workflow_dispatch'
+        run: echo "Selected Environment: ${{ github.event.inputs.environment }}"
+
+      - name: Print environment (Automatic run)
+        if: github.event_name == 'push'
+        run: echo "Environment: dev (Triggered automatically from dev branch)"
