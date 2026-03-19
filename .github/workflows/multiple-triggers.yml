@@ -24,5 +24,6 @@ jobs:
       - name: Print message
         run: echo Workflow is running successfully
 
-    # - name: Print selected environment
-      #  run: echo Selected Environment: ${{ github.event.inputs.environment }}
+      - name: Print selected environment
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        run: echo Selected Environment: ${{ github.event.inputs.environment }}
