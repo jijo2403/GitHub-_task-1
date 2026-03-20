@@ -3,7 +3,7 @@ name: Task 1 - Multiple Workflow Triggers
 on:
   push:
     branches:
-      - dev
+      - Manual-trigger
 
   workflow_dispatch:
     inputs:
@@ -24,5 +24,6 @@ jobs:
       - name: Print message
         run: echo Workflow is running successfully
 
-      - name: Print branch name
-        run: echo Branch name is ${{ github.ref_name }}
+      - name: Print selected environment
+        if: github.event_name == 'workflow_dispatch'
+        run: echo Selected environment is ${{ inputs.environment }}
