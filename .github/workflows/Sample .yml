@@ -2,8 +2,8 @@
 name: Task 2 - Multiple Workflow Triggers
 
 on:
- 
   workflow_dispatch:
+  
 jobs:
   test-workflow:
     runs-on: windows-latest
@@ -12,5 +12,4 @@ jobs:
       - name: Print message
         run: echo Workflow is running successfully
 
-      - name: Print branch name
-        run: echo Branch name is ${{ github.ref_name }}
+
