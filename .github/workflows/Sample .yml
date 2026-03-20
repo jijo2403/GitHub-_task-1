@@ -1,6 +1,5 @@
 
-name: Task 2 - Multiple Workflow Triggers
-
+name: Maual trigger 
 on:
   workflow_dispatch:
   
