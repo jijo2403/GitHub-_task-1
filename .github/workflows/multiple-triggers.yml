@@ -24,5 +24,5 @@ jobs:
       - name: Print message
         run: echo Workflow is running successfully
 
-      - name: Print branch name
-        run: echo Branch name is ${{ github.ref_name }}
+      - name: Print selected environment
+        run: echo Selected environment is ${{ inputs.environment }}
