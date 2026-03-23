@@ -3,7 +3,7 @@ name: Task 1 - Multiple Workflow Triggers
 on:
   push:
     branches:
-      - Manual-trigger
+      - feature_branch
 
   workflow_dispatch:
     inputs:
