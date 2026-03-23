@@ -1,4 +1,4 @@
-name: Task 2 - Pull Request Target Workflow
+name: Task 2 - Pull Request Target Workflow (task 2)
 
 on:
   pull_request_target:
