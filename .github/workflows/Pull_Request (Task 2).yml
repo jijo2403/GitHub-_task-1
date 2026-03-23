@@ -16,5 +16,8 @@ jobs:
       - name: Print message
         run: echo Pull Request workflow is running
 
+      - name: Print branch name
+        run: echo PR is created for ${{ github.base_ref }}
+
       - name: Print PR action type
         run: echo Pull Request action is ${{ github.event.action }}
