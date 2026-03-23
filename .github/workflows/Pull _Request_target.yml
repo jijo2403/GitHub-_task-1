@@ -1,0 +1,22 @@
+name: Task 2 - Pull Request Target Workflow
+
+on:
+  pull_request_target:
+    branches:
+      - main
+    types:
+      - opened
+      - closed
+
+jobs:
+  pr-target:
+    runs-on: windows-latest
+
+    steps:
+      - name: Print message
+        run: echo pull_request_target workflow is running
+
+      - name: Print PR action type
+        run: echo PR action is ${{ github.event.action }}
+
+    
