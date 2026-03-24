@@ -1,4 +1,4 @@
-name: Task 1 - Multiple Workflow Triggers
+name: Task 1 - Multiple Workflow Triggers (Feature_branch2)
 
 on:
   push:
