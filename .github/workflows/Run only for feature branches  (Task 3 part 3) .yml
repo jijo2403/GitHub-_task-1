@@ -1,0 +1,16 @@
+name: Task 3 - Run only for feature branches
+
+on:
+  pull_request:
+
+jobs:
+  feature-branch-job:
+    if: startsWith(github.head_ref, 'feature/')
+    runs-on: windows-latest
+
+    steps:
+      - name: Print branch name
+        run: echo Pull Request created from a feature branch
+
+      - name: Show branch
+        run: echo Branch name is ${{ github.head_ref }}
