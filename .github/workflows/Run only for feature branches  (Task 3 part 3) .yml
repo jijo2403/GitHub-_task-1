@@ -9,8 +9,6 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Print branch name (feature/branch3)
-        run: echo Pull Request created from a feature branch
-
+     
       - name: Show branch
         run: echo Branch name is ${{ github.head_ref }}
