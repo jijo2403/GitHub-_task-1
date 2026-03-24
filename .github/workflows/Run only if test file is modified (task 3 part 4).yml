@@ -1,0 +1,16 @@
+name: Task 3- Run only if test file is modified (task 3 part 4)
+
+on:
+  pull_request:
+    types:
+      - opened
+    paths:
+      - 'test file.txt'
+
+jobs:
+  run-if-file-changed:
+    runs-on: windows-latest
+
+    steps:
+      - name: Print message
+        run: echo test file.txt was modified in the PR
