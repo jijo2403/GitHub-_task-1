@@ -1,4 +1,4 @@
-name: Task 3 - Run only for feature branches
+name: Task 3 - Run only for feature branches (part 3)
 
 on:
   pull_request:
