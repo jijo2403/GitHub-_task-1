@@ -9,7 +9,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Print branch name
+      - name: Print branch name (main)
         run: echo Pull Request created from a feature branch
 
       - name: Show branch
