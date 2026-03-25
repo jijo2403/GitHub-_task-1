@@ -21,7 +21,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Print message
+      - name: Print message1
         run: echo Workflow is running successfully
 
       - name: Print selected environment
