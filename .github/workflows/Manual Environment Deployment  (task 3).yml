@@ -1,0 +1,36 @@
+name: Task 3 - Manual Environment Deployment (task 3, part 2)
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Select the environment
+        required: true
+        type: choice
+        options:
+          - dev
+          - qa
+          - prod
+
+jobs:
+
+  dev-deployment:
+    if: github.event.inputs.environment == 'dev'
+    runs-on: windows-latest
+    steps:
+      - name: Deploy to DEV
+        run: echo Deploying to DEV environment
+
+  qa-deployment:
+    if: github.event.inputs.environment == 'qa'
+    runs-on: windows-latest
+    steps:
+      - name: Deploy to QA
+        run: echo Deploying to QA environment
+
+  prod-deployment:
+    if: github.event.inputs.environment == 'prod'
+    runs-on: windows-latest
+    steps:
+      - name: Deploy to PROD
+        run: echo Deploying to PRODUCTION environment
